@@ -20,7 +20,7 @@ import retrofit2.Response;
 
 public class SecondFragment extends Fragment {
     WeatherInfo weatherInfo=new WeatherInfo();
-    TextView fragment;
+    TextView fragment,humidity_degree;
     View view;
 
 
@@ -31,6 +31,7 @@ public class SecondFragment extends Fragment {
 
          view= inflater.inflate(R.layout.fragment_second, container, false);
         fragment=view.findViewById(R.id.fragment2);
+        humidity_degree=view.findViewById(R.id.humidity_degree);
         getWeatherInfo();
         return view;
     }
@@ -44,6 +45,7 @@ public class SecondFragment extends Fragment {
             public void onResponse(Call<WeatherInfo> call, Response<WeatherInfo> response) {
                 weatherInfo = response.body();
                 fragment.setText(weatherInfo.getName());
+                humidity_degree.setText(String.valueOf(weatherInfo.getMain().getHumidity()));
             }
 
             @Override
