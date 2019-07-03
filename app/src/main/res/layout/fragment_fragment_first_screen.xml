@@ -11,9 +11,9 @@
         android:id="@+id/fragment1"
         android:layout_width="match_parent"
         android:layout_height="705dp"
-        android:text="temperature1"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:text="place"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/humidity"
@@ -34,6 +34,28 @@
         app:layout_constraintLeft_toRightOf="@+id/humidity"
         app:layout_constraintTop_toTopOf="@id/humidity"
         app:layout_constraintBottom_toBottomOf="@id/humidity"/>
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="temperature"
+        app:layout_constraintTop_toBottomOf="@id/humidity"
+        app:layout_constraintLeft_toLeftOf="@id/humidity"
+        />
+
+    <TextView
+        android:id="@+id/temperature_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:inputType="number"
+        android:text="temperature_degree"
+        app:layout_constraintTop_toTopOf="@+id/temperature"
+        app:layout_constraintBottom_toBottomOf="@id/temperature"
+        app:layout_constraintLeft_toLeftOf="@id/humidity_degree"/>
+
 
 
 </android.support.constraint.ConstraintLayout>

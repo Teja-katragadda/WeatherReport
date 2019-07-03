@@ -18,10 +18,10 @@ import retrofit2.Response;
 
 
 public class FragmentFirstScreen extends Fragment {
-    WeatherInfo weatherInfo ;
+    WeatherInfo weatherInfo;
 
     TextView fragment1;
-    TextView humidity_degree;
+    TextView humidity_degree, temperature, temperature_degree;
     View view;
 
     @Override
@@ -30,8 +30,10 @@ public class FragmentFirstScreen extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_fragment_first_screen, container, false);
         fragment1 = view.findViewById(R.id.fragment1);
-        humidity_degree=view.findViewById(R.id.humidity_degree);
-getWeatherInfo();
+        humidity_degree = view.findViewById(R.id.humidity_degree);
+        temperature=view.findViewById(R.id.temperature);
+        temperature_degree=view.findViewById(R.id.temperature_degree);
+        getWeatherInfo();
         return view;
 
     }
@@ -46,7 +48,7 @@ getWeatherInfo();
                 weatherInfo = response.body();
                 fragment1.setText(weatherInfo.getName());
                 humidity_degree.setText(String.valueOf(weatherInfo.getMain().getHumidity()));
-
+                temperature_degree.setText(String.valueOf(weatherInfo.getMain().getTempMax()));
 
 
             }
@@ -59,4 +61,5 @@ getWeatherInfo();
         });
 
 
-    }}
+    }
+}
