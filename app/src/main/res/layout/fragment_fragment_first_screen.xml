@@ -3,13 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FragmentFirstScreen">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/fragment1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="temperature1" />
+        android:layout_height="705dp"
+        android:text="temperature1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="humidity"
+        app:layout_constraintLeft_toLeftOf="@+id/fragment1"
+        app:layout_constraintTop_toTopOf="@+id/fragment1" />
+
+    <TextView
+        android:id="@+id/humidity_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginLeft="72dp"
+        android:text="humidity_degree"
+        app:layout_constraintLeft_toRightOf="@+id/humidity"
+        app:layout_constraintTop_toTopOf="@id/humidity"
+        app:layout_constraintBottom_toBottomOf="@id/humidity"/>
+
 
 </android.support.constraint.ConstraintLayout>

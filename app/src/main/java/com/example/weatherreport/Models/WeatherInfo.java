@@ -9,7 +9,7 @@ public class WeatherInfo {
     @SerializedName("coord")
     private Coord coord;
     @SerializedName("weather")
-    private List<Weather> weather = null;
+    private List<Weather> weather;
     @SerializedName("base")
     private String base;
     private Main main;

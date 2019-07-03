@@ -2,7 +2,7 @@ package com.example.weatherreport.Models;
 
 import com.google.gson.annotations.SerializedName;
 
-class Weather {
+public class Weather {
     @SerializedName("id")
     private Integer id;
 

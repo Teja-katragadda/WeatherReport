@@ -2,7 +2,7 @@ package com.example.weatherreport.Models;
 
 import com.google.gson.annotations.SerializedName;
 
-class System {
+ public class System {
 
     @SerializedName("type")
     private Double type;

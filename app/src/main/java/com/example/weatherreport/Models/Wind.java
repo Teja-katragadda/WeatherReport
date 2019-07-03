@@ -2,9 +2,11 @@ package com.example.weatherreport.Models;
 
 import com.google.gson.annotations.SerializedName;
 
-class Wind {
+public class Wind {
     @SerializedName("speed")
     private Double speed;
+    @SerializedName("deg")
+    private Integer deg;
 
     public void setSpeed(Double speed) {
         this.speed = speed;
@@ -22,6 +24,5 @@ class Wind {
         return deg;
     }
 
-    @SerializedName("deg")
-    private Integer deg;
+
 }

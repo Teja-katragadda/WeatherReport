@@ -18,9 +18,10 @@ import retrofit2.Response;
 
 
 public class FragmentFirstScreen extends Fragment {
-    WeatherInfo weatherInfo = new WeatherInfo();
+    WeatherInfo weatherInfo ;
 
     TextView fragment1;
+    TextView humidity_degree;
     View view;
 
     @Override
@@ -29,6 +30,7 @@ public class FragmentFirstScreen extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_fragment_first_screen, container, false);
         fragment1 = view.findViewById(R.id.fragment1);
+        humidity_degree=view.findViewById(R.id.humidity_degree);
 getWeatherInfo();
         return view;
 
@@ -43,6 +45,8 @@ getWeatherInfo();
             public void onResponse(Call<WeatherInfo> call, Response<WeatherInfo> response) {
                 weatherInfo = response.body();
                 fragment1.setText(weatherInfo.getName());
+                humidity_degree.setText(String.valueOf(weatherInfo.getMain().getHumidity()));
+
 
 
             }
