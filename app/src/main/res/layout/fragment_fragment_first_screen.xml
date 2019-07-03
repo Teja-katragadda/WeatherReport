@@ -3,17 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".FragmentFirstScreen">
 
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/fragment1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-    </android.support.v4.view.ViewPager>
-
-
+        android:layout_height="match_parent"
+        android:text="temperature1" />
 
 </android.support.constraint.ConstraintLayout>
