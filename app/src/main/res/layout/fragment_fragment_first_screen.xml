@@ -6,9 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FragmentFirstScreen">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/fragment1"
+        android:id="@+id/place"
         android:layout_width="match_parent"
         android:layout_height="705dp"
         android:text="place"
@@ -21,8 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
         android:text="humidity"
-        app:layout_constraintLeft_toLeftOf="@+id/fragment1"
-        app:layout_constraintTop_toTopOf="@+id/fragment1" />
+        app:layout_constraintLeft_toLeftOf="@+id/place"
+        app:layout_constraintTop_toTopOf="@+id/place" />
 
     <TextView
         android:id="@+id/humidity_degree"

@@ -29,7 +29,7 @@ public class FragmentFirstScreen extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_fragment_first_screen, container, false);
-        fragment1 = view.findViewById(R.id.fragment1);
+        fragment1 = view.findViewById(R.id.place);
         humidity_degree = view.findViewById(R.id.humidity_degree);
         temperature=view.findViewById(R.id.temperature);
         temperature_degree=view.findViewById(R.id.temperature_degree);
