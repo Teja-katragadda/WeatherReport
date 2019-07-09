@@ -1,60 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".FragmentFirstScreen">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/place"
+    <data
+        class = "ActivityMainBinding"
+        >
+        <variable
+            name="weatherResponse"
+            type="com.example.weatherreport.WeatherResponse"></variable>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="705dp"
-        android:text="place"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_height="match_parent"
+        tools:context=".FragmentFirstScreen">
 
-    <TextView
-        android:id="@+id/humidity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        android:text="humidity"
-        app:layout_constraintLeft_toLeftOf="@+id/place"
-        app:layout_constraintTop_toTopOf="@+id/place" />
+        <TextView
+            android:id="@+id/place"
+            android:layout_width="match_parent"
+            android:layout_height="705dp"
+            android:text="@{viewModel.place}"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
 
-    <TextView
-        android:id="@+id/humidity_degree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:layout_marginLeft="72dp"
-        android:text="humidity_degree"
-        app:layout_constraintLeft_toRightOf="@+id/humidity"
-        app:layout_constraintTop_toTopOf="@id/humidity"
-        app:layout_constraintBottom_toBottomOf="@id/humidity"/>
-    <TextView
-        android:id="@+id/temperature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="temperature"
-        app:layout_constraintTop_toBottomOf="@id/humidity"
-        app:layout_constraintLeft_toLeftOf="@id/humidity"
-        />
+        <TextView
+            android:id="@+id/humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            android:text="@{viewModel.humidity}"
+            app:layout_constraintLeft_toLeftOf="@+id/place"
+            app:layout_constraintTop_toTopOf="@+id/place" />
 
-    <TextView
-        android:id="@+id/temperature_degree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:inputType="number"
-        android:text="temperature_degree"
-        app:layout_constraintTop_toTopOf="@+id/temperature"
-        app:layout_constraintBottom_toBottomOf="@id/temperature"
-        app:layout_constraintLeft_toLeftOf="@id/humidity_degree"/>
+        <TextView
+            android:id="@+id/humidity_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="72dp"
+            android:inputType="number"
+            android:text="@{viewModel.humidity_degree}"
+            app:layout_constraintBottom_toBottomOf="@id/humidity"
+            app:layout_constraintLeft_toRightOf="@+id/humidity"
+            app:layout_constraintTop_toTopOf="@id/humidity" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@{viewModel.temperature}"
+            app:layout_constraintLeft_toLeftOf="@id/humidity"
+            app:layout_constraintTop_toBottomOf="@id/humidity" />
+
+        <TextView
+            android:id="@+id/temperature_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="number"
+            android:text="@{viewModel.temeprature_degree}"
+            app:layout_constraintBottom_toBottomOf="@id/temperature"
+            app:layout_constraintLeft_toLeftOf="@id/humidity_degree"
+            app:layout_constraintTop_toTopOf="@+id/temperature" />
 
 
-
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>
