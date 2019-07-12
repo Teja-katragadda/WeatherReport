@@ -1,18 +1,14 @@
 package com.example.weatherreport;
 
 public class WeatherItemViewModel {
+
     private String cityName;
-    private Integer temperature;
+    private String temperature;
     private String description;
 
     public WeatherItemViewModel() {
     }
 
-    public WeatherItemViewModel(String cityName, Integer temperature, String description) {
-        this.cityName = cityName;
-        this.temperature = temperature;
-        this.description = description;
-    }
 
     public String getCityName() {
         return cityName;
@@ -23,10 +19,10 @@ public class WeatherItemViewModel {
     }
 
     public String getTemperature() {
-        return temperature.toString();
+        return temperature;
     }
 
-    public void setTemperature(Integer temperature) {
+    public void setTemperature(String temperature) {
         this.temperature = temperature;
     }
 

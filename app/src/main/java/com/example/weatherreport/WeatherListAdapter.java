@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.example.weatherreport.databinding.ItemWeatherBinding;
-import com.example.weatherreport.models.WeatherInfo;
 
 import java.util.List;
 
@@ -15,7 +14,7 @@ public class WeatherListAdapter extends RecyclerView.Adapter<WeatherListAdapter.
 
     private List<WeatherItemViewModel> weatherItemViewModels;
 
-    public void setWeatherItemViewModels(List<WeatherItemViewModel> weatherItemViewModels) {
+    public WeatherListAdapter(List<WeatherItemViewModel> weatherItemViewModels) {
         this.weatherItemViewModels = weatherItemViewModels;
     }
 
@@ -33,7 +32,6 @@ public class WeatherListAdapter extends RecyclerView.Adapter<WeatherListAdapter.
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         WeatherItemViewModel weatherItemViewModel = weatherItemViewModels.get(i);
         viewHolder.bind(weatherItemViewModel);
-        viewHolder.binding.executePendingBindings();
     }
 
     @Override
@@ -51,7 +49,9 @@ public class WeatherListAdapter extends RecyclerView.Adapter<WeatherListAdapter.
         }
 
         public void bind(WeatherItemViewModel itemViewModel) {
-        binding.setItemViewModel(itemViewModel);
+            binding.setItemViewModel(itemViewModel);
+            binding.executePendingBindings();
+
         }
 
 
