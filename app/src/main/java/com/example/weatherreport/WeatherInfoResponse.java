@@ -12,7 +12,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class WeatherInfoResponse {
- private List<WeatherInfo> responseList;
+
+    private List<WeatherInfo> responseList;
 
     private ArrayList<String> mcity = new ArrayList<>();
 
@@ -43,8 +44,6 @@ public class WeatherInfoResponse {
         return responseList;
 
     }
-
-
 
 
 

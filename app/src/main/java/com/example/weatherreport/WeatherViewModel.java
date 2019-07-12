@@ -35,9 +35,15 @@ public class WeatherViewModel extends ViewModel implements LifecycleObserver {
         weatherItemViewModel2.setDescription("Partly cloudy 3");
         weatherItemViewModel2.setTemperature(35);
 
+//        WeatherItemViewModel weatherItemViewModel3 = new WeatherItemViewModel("chennai3", 33,"clud");
+
+
+
         weatherItemViewModelList.add(weatherItemViewModel);
         weatherItemViewModelList.add(weatherItemViewModel1);
         weatherItemViewModelList.add(weatherItemViewModel2);
+
+
 
         weatherListAdapter.setWeatherItemViewModels(weatherItemViewModelList);
     }

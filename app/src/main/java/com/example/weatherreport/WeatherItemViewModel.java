@@ -5,6 +5,15 @@ public class WeatherItemViewModel {
     private Integer temperature;
     private String description;
 
+    public WeatherItemViewModel() {
+    }
+
+    public WeatherItemViewModel(String cityName, Integer temperature, String description) {
+        this.cityName = cityName;
+        this.temperature = temperature;
+        this.description = description;
+    }
+
     public String getCityName() {
         return cityName;
     }

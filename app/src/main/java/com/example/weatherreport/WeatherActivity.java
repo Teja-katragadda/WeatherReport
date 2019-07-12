@@ -24,7 +24,8 @@ public class WeatherActivity extends AppCompatActivity implements LifecycleOwner
         weatherActivityBinding = DataBindingUtil.setContentView(this,R.layout.weather_activity);
         weatherActivityBinding.setViewModel(weatherViewModel);
         this.getLifecycle().addObserver(weatherViewModel);
-        weatherActivityBinding.recyclerView1.setAdapter(weatherViewModel.getAdapter());
+//        weatherActivityBinding.recyclerView1.setAdapter(weatherViewModel.getAdapter());
+      weatherActivityBinding.setViewModel(weatherViewModel);
 
     }
 }
