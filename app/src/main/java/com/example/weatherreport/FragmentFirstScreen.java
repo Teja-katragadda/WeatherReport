@@ -2,13 +2,12 @@ package com.example.weatherreport;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.weatherreport.Models.WeatherInfo;
+import com.example.weatherreport.models.WeatherInfo;
 import com.example.weatherreport.ServiceLayer.GetServiceData;
 import com.example.weatherreport.ServiceLayer.RetrofitClientInstance;
 
@@ -28,7 +27,7 @@ public class FragmentFirstScreen extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_fragment_first_screen, container, false);
+        view = inflater.inflate(R.layout.viewpager_activity, container, false);
         fragment1 = view.findViewById(R.id.place);
         humidity_degree = view.findViewById(R.id.humidity_degree);
         temperature=view.findViewById(R.id.temperature);

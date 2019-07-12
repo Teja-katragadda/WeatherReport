@@ -4,10 +4,9 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.view.ViewGroup;
 
-import com.example.weatherreport.Models.WeatherInfo;
+import com.example.weatherreport.models.WeatherInfo;
 
 public class AdapterClass extends FragmentPagerAdapter {
     FragmentManager manager;

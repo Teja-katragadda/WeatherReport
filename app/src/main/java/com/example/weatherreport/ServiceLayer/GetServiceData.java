@@ -1,6 +1,6 @@
 package com.example.weatherreport.ServiceLayer;
 
-import com.example.weatherreport.Models.WeatherInfo;
+import com.example.weatherreport.models.WeatherInfo;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

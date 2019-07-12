@@ -8,9 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.weatherreport.Models.WeatherInfo;
+import com.example.weatherreport.models.WeatherInfo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ViewPagerAdapter extends PagerAdapter {
@@ -27,7 +26,7 @@ public class ViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.fragment_fragment_first_screen, container, false);
+        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.viewpager_activity, container, false);
         TextView place = view.findViewById(R.id.place);
         TextView humidity = view.findViewById(R.id.humidity_degree);
         TextView temperature = view.findViewById(R.id.temperature_degree);

@@ -1,7 +1,5 @@
 package com.example.weatherreport;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.weatherreport.Models.WeatherInfo;
+import com.example.weatherreport.models.WeatherInfo;
 import com.example.weatherreport.ServiceLayer.GetServiceData;
 import com.example.weatherreport.ServiceLayer.RetrofitClientInstance;
 
@@ -29,7 +27,7 @@ public class SecondFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-         view= inflater.inflate(R.layout.fragment_second, container, false);
+         //view= inflater.inflate(R.layout.fragment_second, container, false);
 //       fragment=view.findViewById(R.id.fragment2);
         humidity_degree=view.findViewById(R.id.humidity_degree);
         temperature=view.findViewById(R.id.temperature);
