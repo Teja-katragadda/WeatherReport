@@ -10,16 +10,32 @@ import android.util.Log;
 import com.example.weatherreport.ServiceLayer.GetServiceData;
 import com.example.weatherreport.ServiceLayer.RetrofitClientInstance;
 import com.example.weatherreport.databinding.ItemWeatherBinding;
+import com.example.weatherreport.models.Weather;
 import com.example.weatherreport.models.WeatherInfo;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.inject.Inject;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class WeatherViewModel implements LifecycleObserver {
+
+
+    @Inject
+    String name;
+
+
+    public String dummy = name;
+
+ @Inject
+public WeatherViewModel(){
+
+
+}
 
 
     private static final String TAG = "WeatherViewModel";
