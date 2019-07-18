@@ -12,8 +12,6 @@ public abstract class AndroidBuilderModule {
     @ContributesAndroidInjector
     abstract WeatherActivity providesWeather();
 
-    @ContributesAndroidInjector
-    abstract WeatherViewModel weatherViewModel();
 
 
 }

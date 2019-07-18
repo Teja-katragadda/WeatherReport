@@ -19,11 +19,6 @@ public class WeatherActivity extends AppCompatActivity implements LifecycleOwner
     @Inject
     WeatherViewModel weatherViewModel;
 
-    @Inject
-    public String name;
-
-    public String hello;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +30,7 @@ public class WeatherActivity extends AppCompatActivity implements LifecycleOwner
         this.getLifecycle().addObserver(weatherViewModel);
 
 
-
         weatherActivityBinding.recyclerView1.setAdapter(weatherViewModel.getAdapter());
-       // weatherActivityBinding.textview.setText(name);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL,false);
         weatherActivityBinding.recyclerView1.setLayoutManager(linearLayoutManager);
         weatherActivityBinding.recyclerView1.setHasFixedSize(true);

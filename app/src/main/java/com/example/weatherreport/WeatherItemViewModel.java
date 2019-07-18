@@ -1,5 +1,7 @@
 package com.example.weatherreport;
 
+import javax.inject.Inject;
+
 public class WeatherItemViewModel {
 
     private String cityName;
