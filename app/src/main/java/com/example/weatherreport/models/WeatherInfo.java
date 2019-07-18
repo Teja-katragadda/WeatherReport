@@ -7,7 +7,7 @@ import java.util.List;
 public class WeatherInfo {
 
     @SerializedName("coord")
-    private Coord coord;
+    private Coordinates coord;
     @SerializedName("weather")
     private List<Weather> weather;
     @SerializedName("base")
@@ -32,10 +32,10 @@ public class WeatherInfo {
     @SerializedName("cod")
     private Integer cod;
 
-    public Coord getCoord() {
+    public Coordinates getCoord() {
         return coord;
     }
-    public void setCoord(Coord coord) {
+    public void setCoord(Coordinates coord) {
         this.coord = coord;
     }
 
