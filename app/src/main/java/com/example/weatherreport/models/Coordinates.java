@@ -1,9 +1,8 @@
-package com.example.weatherreport.Models;
+package com.example.weatherreport.models;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Coord {
+public class Coordinates {
 
     @SerializedName("lon")
     private Double lon;
